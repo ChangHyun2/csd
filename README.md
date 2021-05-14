@@ -1,14 +1,16 @@
-자세한 csd 사용법은 [detail](./detail.md)을 참고해주세요.
 
+[코드샌드박스 example](https://codesandbox.io/s/muddy-silence-c37yr?file=/src/App.js)을 먼저 참고해주세요.
 ## 1. csd ?
 
 **css codes for design systems**
 
 emotion 또는 styled-components와 같은 css in js 라이브러리를 활용해 css를 작성할 때
 반복되는 코드를 줄여주고 디자인 시스템을 빠르게 적용할 수 있도록 돕는 cssCodes 라이브러리입니다.
+<br/>  
+<em>bootstrap를 참고하였으며 [프로젝트](https://github.com/ChangHyun2/airbnb-client)를 진행하며 적용해본 스타일링 방법입니다.   
+자세한 csd 사용법은 [detail](./detail.md)에 작성했습니다.</em>
 <br/>
-<em>bootstrap를 참고하였으며 [프로젝트](https://github.com/ChangHyun2/airbnb-client)를 진행하며 적용해본 스타일링 방법입니다.</em>
-<br/>
+
 
 ## 2. csd 라이브러리에서 제공하는 디자인 시스템을 그대로 사용할 경우
 

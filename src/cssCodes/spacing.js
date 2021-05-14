@@ -12,6 +12,7 @@ const spacing = {
   50: SPACING[50] + 'px',
   60: SPACING[60] + 'px',
   70: SPACING[70] + 'px',
+  80: SPACING[80] + 'px',
 };
 
 export default spacing;

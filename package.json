@@ -1,6 +1,6 @@
 {
   "name": "csd",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "css codes with design system in css in js libraries",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

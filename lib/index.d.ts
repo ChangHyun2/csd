@@ -36,12 +36,12 @@ export type MarginBottomOption =
 export type SpacingOption =
   | 4
   | 8
-  | 16
-  | 24
-  | 49
   | 10
+  | 16
   | 20
+  | 24
   | 30
+  | 40
   | 50
   | 60
   | 70

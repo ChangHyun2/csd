@@ -162,7 +162,6 @@ export const alignChild: AlignChild;
 
 export type GridOption =
   | 'grid'
-  | 'grid0'
   | 'grid1'
   | 'grid2'
   | 'grid3'
@@ -240,13 +239,67 @@ interface S {
   alignSelf: AlignSelf;
   baseComponent: any;
   mediaQuery: MediaQuery;
-  typo: Typo;
-  values: Values;
-  zIndex: ZIndex;
-  round: Round;
   pad: Pad;
+  round: Round;
   spacing: Spacing;
-  color: Colors;
+  typo: Typo;
+  zIndex: ZIndex;
+
+  values: Values;
+  colors: Colors;
+
+  flex: CSSCode;
+  row: CSSCode;
+  rowCenter: CSSCode;
+  rowSpaceBetween: CSSCode;
+  rowEnd: CSSCode;
+  col: CSSCode;
+  colCenter: CSSCode;
+  colSpaceBetween: CSSCode;
+  colEnd: CSSCode;
+  relative: CSSCode;
+
+  fluid: CSSCode;
+  grid: CSSCode;
+  grid1: CSSCode;
+  grid2: CSSCode;
+  grid3: CSSCode;
+  grid4: CSSCode;
+  grid5: CSSCode;
+  grid6: CSSCode;
+  grid7: CSSCode;
+  grid8: CSSCode;
+  grid9: CSSCode;
+  grid10: CSSCode;
+  grid11: CSSCode;
+  grid12: CSSCode;
+  absolute: CSSCode;
+  mb1: CSSCode;
+  mb2: CSSCode;
+  mb3: CSSCode;
+  mb4: CSSCode;
+  mb5: CSSCode;
+  mb6: CSSCode;
+  mb7: CSSCode;
+  mb8: CSSCode;
+  baseButton: CSSCode;
+
+  xsOnly: MQCodeCreator;
+  over: MediaQueryCreators;
+  under: MediaQueryCreators;
+  smTo: MediaQueryCreators;
+  mdTo: MediaQueryCreators;
+
+  bold: CSSCode;
+  textCenter: CSSCode;
+  h10: CSSCode;
+  h12: CSSCode;
+  h14: CSSCode;
+  h16: CSSCode;
+  h18: CSSCode;
+  h22: CSSCode;
+  h32: CSSCode;
+  h42: CSSCode;
 }
 
 declare let s: S;

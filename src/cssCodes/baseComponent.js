@@ -16,14 +16,14 @@ export const baseButton = `
   font-size: inherit;
 `;
 
-export const baseLink = `
-  display:inline-block;
-  text-decoration:none;
-  color:inherit;
-  :visited,:link{
-    color:inherit;
-  }
-`;
+// export const baseLink = `
+//   display:inline-block;
+//   text-decoration:none;
+//   color:inherit;
+//   :visited,:link{
+//     color:inherit;
+//   }
+// `;
 
 // baseContainer
 export const baseContainer = (options = {}) => {

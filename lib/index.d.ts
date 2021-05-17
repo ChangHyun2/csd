@@ -126,6 +126,7 @@ export interface HueColors {
   deepOrange: Color;
   deepPurple: Color;
   green: Color;
+  grey: Color;
   indigo: Color;
   lightBlue: Color;
   lightGreen: Color;

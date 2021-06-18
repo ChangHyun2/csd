@@ -1,5 +1,8 @@
 
-[코드샌드박스 example](https://codesandbox.io/s/muddy-silence-c37yr?file=/src/App.js)을 먼저 참고해주세요.
+[코드샌드박스 example](https://codesandbox.io/s/muddy-silence-c37yr?file=/src/App.js)
+
+# 코드 참조시 반드시 출처 표기 부탁드립니다!
+
 ## 1. csd ?
 
 **css codes for design systems**
@@ -44,8 +47,7 @@ const Nav = () => <StyledNav>
 
 ## 3. 커스텀한 디자인 시스템을 적용할 경우
 
-csd 라이브러리에는 airbnb 사이트를 클론하며 간추린 디자인 시스템과 material ui의 칼라시스템을 포함하고 있습니다.
-새로운 디자인 시스템을 적용할 경우 이와 관련된 파일을 수정한 후 `npm run build`한 `index.js`와 `index.d.ts` 파일을 프로젝트로 옮겨주신 후 `webpack alias`를 적용해 `import s from 'S'`문으로 새롭게 구성된 cssCodes를 사용해주시면 됩니다.
+새로운 디자인 시스템을 적용할 경우 csd에서 기본적으로 제공하는 디자인 시스템 관련 파일들을 수정한 후 `npm run build`한 `index.js`와 `index.d.ts` 파일을 프로젝트로 옮겨주신 후 `webpack alias`를 적용해 `import s from 'S'`문으로 새롭게 구성된 cssCodes를 사용해주시면 됩니다.
 
 
 **1) 레포 클론**

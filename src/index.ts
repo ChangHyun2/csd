@@ -1,14 +1,11 @@
 import {
   alignChild,
   alignSelf,
-  baseComponent,
   mediaQuery,
-  pad,
-  round,
-  spacing,
-  zIndex,
   typo,
+  baseComponent,
 } from "./CSSRules";
+import * as CSSRules from "./CSSRules";
 import * as values from "./values";
 import colors from "./colors";
 
@@ -17,18 +14,9 @@ export const s = {
   ...alignSelf,
   ...baseComponent,
   ...mediaQuery,
-  ...zIndex,
   ...typo,
 
-  alignChild,
-  alignSelf,
-  baseComponent,
-  mediaQuery,
-  pad,
-  round,
-  spacing,
-  zIndex,
-  typo,
+  ...CSSRules,
   values,
   colors,
 };

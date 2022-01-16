@@ -1,37 +1,37 @@
-export type CSSCode = string;
-export type MQCodeCreator = (cssCode: CSSCode) => CSSCode;
-export interface CSSCodes {
-  [index: string]: CSSCode;
+export type CSSRule = string;
+export type MQCodeCreator = (CSSRule: CSSRule) => CSSRule;
+export interface CSSRules {
+  [index: string]: CSSRule;
 }
 
 /********** Design System  ************/
 
-// Detail values are written in cssCodes files.
-export type BreakpointOption = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+// Detail values are written in CSSRules files.
+export type BreakpointOption = "xs" | "sm" | "md" | "lg" | "xl";
 
 export type HOption = 10 | 12 | 14 | 16 | 18 | 22 | 32 | 42;
 export type HValue = HOption;
 
 // you're able to define heading option with heading1, heading2, display1, display2, ...
 export type HeadingOption =
-  | 'h10'
-  | 'h12'
-  | 'h14'
-  | 'h16'
-  | 'h18'
-  | 'h22'
-  | 'h32'
-  | 'h42';
+  | "h10"
+  | "h12"
+  | "h14"
+  | "h16"
+  | "h18"
+  | "h22"
+  | "h32"
+  | "h42";
 
 export type MarginBottomOption =
-  | 'mb1'
-  | 'mb2'
-  | 'mb3'
-  | 'mb4'
-  | 'mb5'
-  | 'mb6'
-  | 'mb7'
-  | 'mb8';
+  | "mb1"
+  | "mb2"
+  | "mb3"
+  | "mb4"
+  | "mb5"
+  | "mb6"
+  | "mb7"
+  | "mb8";
 
 export type SpacingOption =
   | 4
@@ -49,13 +49,13 @@ export type SpacingOption =
 export type SpacingValue = SpacingOption;
 
 export type ZIndexOption =
-  | 'dropdown'
-  | 'sticky'
-  | 'fixed'
-  | 'backdrop'
-  | 'modal'
-  | 'popover'
-  | 'tooltip';
+  | "dropdown"
+  | "sticky"
+  | "fixed"
+  | "backdrop"
+  | "modal"
+  | "popover"
+  | "tooltip";
 
 /**********  Values (design system) ************/
 
@@ -99,20 +99,20 @@ export const values: Values;
 /**********  Colors (design system) ************/
 
 type Contrast =
-  | '50'
-  | '100'
-  | '200'
-  | '300'
-  | '400'
-  | '500'
-  | '600'
-  | '700'
-  | '800'
-  | '900'
-  | 'A100'
-  | 'A200'
-  | 'A400'
-  | 'A700';
+  | "50"
+  | "100"
+  | "200"
+  | "300"
+  | "400"
+  | "500"
+  | "600"
+  | "700"
+  | "800"
+  | "900"
+  | "A100"
+  | "A200"
+  | "A400"
+  | "A700";
 
 export type Color = Record<Contrast, string>;
 
@@ -146,43 +146,43 @@ export interface Colors extends HueColors {
 
 /**********  alignChild  ************/
 export type AlignChildOption =
-  | 'flex'
-  | 'row'
-  | 'rowCenter'
-  | 'rowSpaceBetween'
-  | 'rowEnd'
-  | 'col'
-  | 'colCenter'
-  | 'colSpaceBetween'
-  | 'colEnd'
-  | 'relative';
-export type AlignChild = Record<AlignChildOption, CSSCode>;
+  | "flex"
+  | "row"
+  | "rowCenter"
+  | "rowSpaceBetween"
+  | "rowEnd"
+  | "col"
+  | "colCenter"
+  | "colSpaceBetween"
+  | "colEnd"
+  | "relative";
+export type AlignChild = Record<AlignChildOption, CSSRule>;
 export const alignChild: AlignChild;
 
 /**********  alignSelf  ************/
 
 export type GridOption =
-  | 'grid'
-  | 'grid1'
-  | 'grid2'
-  | 'grid3'
-  | 'grid4'
-  | 'grid5'
-  | 'grid6'
-  | 'grid7'
-  | 'grid8'
-  | 'grid9'
-  | 'grid10'
-  | 'grid11'
-  | 'grid12';
+  | "grid"
+  | "grid1"
+  | "grid2"
+  | "grid3"
+  | "grid4"
+  | "grid5"
+  | "grid6"
+  | "grid7"
+  | "grid8"
+  | "grid9"
+  | "grid10"
+  | "grid11"
+  | "grid12";
 
 export type AlignSelfOption =
-  | 'fluid'
+  | "fluid"
   | GridOption
-  | 'absolute'
+  | "absolute"
   | MarginBottomOption;
 
-export type AlignSelf = Record<AlignSelfOption, CSSCode>;
+export type AlignSelf = Record<AlignSelfOption, CSSRule>;
 export const alignSelf: AlignSelf;
 
 //! basecomponent
@@ -206,31 +206,31 @@ export const mediaQuery: MediaQuery;
 
 /**********  pad  ************/
 
-export type Pad = Record<BreakpointOption, CSSCode>;
+export type Pad = Record<BreakpointOption, CSSRule>;
 export const pad: Pad;
 
 /**********  colors  ************/
 
 /**********  round  ************/
 
-export type Round = Record<BreakpointOption, CSSCode>;
+export type Round = Record<BreakpointOption, CSSRule>;
 export const round: Round;
 
 /**********  spacing  ************/
 
-export type Spacing = Record<SpacingOption, CSSCode>;
+export type Spacing = Record<SpacingOption, CSSRule>;
 export const spacing: Spacing;
 
 /**********  typo  ************/
 
 // export type FontWeight
 // export type FontTransform
-export type Typo = Record<'bold' | 'textCenter' | HeadingOption, CSSCode>;
+export type Typo = Record<"bold" | "textCenter" | HeadingOption, CSSRule>;
 export const typo: Typo;
 
 /**********  zIndex  ************/
 
-export type ZIndex = Record<ZIndexOption, CSSCode>;
+export type ZIndex = Record<ZIndexOption, CSSRule>;
 export const zIndex: ZIndex;
 
 /**********  S ( default exported module in index.js )  ************/
@@ -249,41 +249,41 @@ interface S {
   values: Values;
   colors: Colors;
 
-  flex: CSSCode;
-  row: CSSCode;
-  rowCenter: CSSCode;
-  rowSpaceBetween: CSSCode;
-  rowEnd: CSSCode;
-  col: CSSCode;
-  colCenter: CSSCode;
-  colSpaceBetween: CSSCode;
-  colEnd: CSSCode;
-  relative: CSSCode;
+  flex: CSSRule;
+  row: CSSRule;
+  rowCenter: CSSRule;
+  rowSpaceBetween: CSSRule;
+  rowEnd: CSSRule;
+  col: CSSRule;
+  colCenter: CSSRule;
+  colSpaceBetween: CSSRule;
+  colEnd: CSSRule;
+  relative: CSSRule;
 
-  fluid: CSSCode;
-  grid: CSSCode;
-  grid1: CSSCode;
-  grid2: CSSCode;
-  grid3: CSSCode;
-  grid4: CSSCode;
-  grid5: CSSCode;
-  grid6: CSSCode;
-  grid7: CSSCode;
-  grid8: CSSCode;
-  grid9: CSSCode;
-  grid10: CSSCode;
-  grid11: CSSCode;
-  grid12: CSSCode;
-  absolute: CSSCode;
-  mb1: CSSCode;
-  mb2: CSSCode;
-  mb3: CSSCode;
-  mb4: CSSCode;
-  mb5: CSSCode;
-  mb6: CSSCode;
-  mb7: CSSCode;
-  mb8: CSSCode;
-  baseButton: CSSCode;
+  fluid: CSSRule;
+  grid: CSSRule;
+  grid1: CSSRule;
+  grid2: CSSRule;
+  grid3: CSSRule;
+  grid4: CSSRule;
+  grid5: CSSRule;
+  grid6: CSSRule;
+  grid7: CSSRule;
+  grid8: CSSRule;
+  grid9: CSSRule;
+  grid10: CSSRule;
+  grid11: CSSRule;
+  grid12: CSSRule;
+  absolute: CSSRule;
+  mb1: CSSRule;
+  mb2: CSSRule;
+  mb3: CSSRule;
+  mb4: CSSRule;
+  mb5: CSSRule;
+  mb6: CSSRule;
+  mb7: CSSRule;
+  mb8: CSSRule;
+  baseButton: CSSRule;
 
   xsOnly: MQCodeCreator;
   over: MediaQueryCreators;
@@ -291,16 +291,16 @@ interface S {
   smTo: MediaQueryCreators;
   mdTo: MediaQueryCreators;
 
-  bold: CSSCode;
-  textCenter: CSSCode;
-  h10: CSSCode;
-  h12: CSSCode;
-  h14: CSSCode;
-  h16: CSSCode;
-  h18: CSSCode;
-  h22: CSSCode;
-  h32: CSSCode;
-  h42: CSSCode;
+  bold: CSSRule;
+  textCenter: CSSRule;
+  h10: CSSRule;
+  h12: CSSRule;
+  h14: CSSRule;
+  h16: CSSRule;
+  h18: CSSRule;
+  h22: CSSRule;
+  h32: CSSRule;
+  h42: CSSRule;
 }
 
 declare let s: S;

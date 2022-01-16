@@ -1,25 +1,28 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, 'lib'),
-    filename: 'index.js',
-    library: 'csd',
-    libraryTarget: 'umd',
-    libraryExport: 'default',
-    globalObject: 'this',
+    path: path.resolve(__dirname, "lib"),
+    filename: "index.js",
+    library: "csd",
+    libraryTarget: "umd",
+    libraryExport: "default",
+    globalObject: "this",
   },
   module: {
     rules: [
       {
         test: /\.ts?$/,
         exclude: /node_modules/,
-        use: ['ts-loader'],
+        use: ["ts-loader"],
       },
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: [".ts", ".js"],
+    alias: {
+      "@types": path.resolve(__dirname, "src/types"),
+    },
   },
 };

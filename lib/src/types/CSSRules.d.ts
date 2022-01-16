@@ -1,0 +1,12 @@
+import { FontSize, LineHeight } from "@/types/system";
+export declare type PixelCSSRule<T> = T extends number | string ? `${T}px` : never;
+export declare type CSSRule = string;
+export declare type CSSRuleCreator = (CSSRule: CSSRule) => CSSRule;
+export declare type HeadingCSSRule<F> = F extends FontSize ? `font-size: ${F}px; line-height: ${LineHeight[F]};` : never;
+export declare type ZIndexOption = "dropdown" | "sticky" | "fixed" | "backdrop" | "modal" | "popover" | "tooltip";
+export declare type MarginBottomOption = "mb1" | "mb2" | "mb3" | "mb4" | "mb5" | "mb6" | "mb7" | "mb8";
+export declare type AlignChildOption = "flex" | "row" | "rowCenter" | "rowSpaceBetween" | "rowEnd" | "col" | "colCenter" | "colSpaceBetween" | "colEnd" | "relative";
+export declare type AlignChild = Record<AlignChildOption, CSSRule>;
+export declare type GridOption = "grid" | "grid0" | "grid1" | "grid2" | "grid3" | "grid4" | "grid5" | "grid6" | "grid7" | "grid8" | "grid9" | "grid10" | "grid11" | "grid12";
+export declare type AlignSelfOption = "fluid" | GridOption | "absolute" | MarginBottomOption;
+export declare type AlignSelf = Record<AlignSelfOption, CSSRule>;

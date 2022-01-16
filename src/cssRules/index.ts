@@ -1,0 +1,9 @@
+export { default as alignChild } from "./alignChild";
+export { default as alignSelf } from "./alignSelf";
+export { default as mediaQuery } from "./mediaQuery";
+export { default as pad } from "./pad";
+export { default as round } from "./round";
+export { default as spacing } from "./spacing";
+export { default as typo } from "./typo";
+export { default as zIndex } from "./zIndex";
+export { default as baseComponent } from "./baseComponent";

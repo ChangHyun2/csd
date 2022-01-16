@@ -2,7 +2,7 @@
   "name": "csd",
   "version": "1.0.6",
   "description": "css codes with design system in css in js libraries",
-  "main": "lib/index.js",
+  "main": "lib/index.ts",
   "types": "lib/index.d.ts",
   "flies": [
     "/lib"

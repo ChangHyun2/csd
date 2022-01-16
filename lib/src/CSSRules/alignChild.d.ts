@@ -1,0 +1,24 @@
+import { CSSRule } from "../types/CSSRules";
+export declare const flex: CSSRule;
+export declare const row: CSSRule;
+export declare const rowCenter: CSSRule;
+export declare const rowSpaceBetween: CSSRule;
+export declare const rowEnd: CSSRule;
+export declare const col: CSSRule;
+export declare const colCenter: CSSRule;
+export declare const colSpaceBetween: CSSRule;
+export declare const colEnd: CSSRule;
+export declare const relative: CSSRule;
+declare const alignChild: {
+    flex: string;
+    row: string;
+    rowCenter: string;
+    rowSpaceBetween: string;
+    rowEnd: string;
+    col: string;
+    colCenter: string;
+    colSpaceBetween: string;
+    colEnd: string;
+    relative: string;
+};
+export default alignChild;

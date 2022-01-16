@@ -1,4 +1,3 @@
-
 [코드샌드박스 example](https://codesandbox.io/s/muddy-silence-c37yr?file=/src/App.js)
 
 # 코드 참조시 반드시 출처 표기 부탁드립니다!
@@ -8,25 +7,26 @@
 **css codes for design systems**
 
 emotion 또는 styled-components와 같은 css in js 라이브러리를 활용해 css를 작성할 때
-반복되는 코드를 줄여주고 디자인 시스템을 빠르게 적용할 수 있도록 돕는 cssCodes 라이브러리입니다.
+반복되는 코드를 줄여주고 디자인 시스템을 빠르게 적용할 수 있도록 돕는 CSSRules 라이브러리입니다.
 <br/>  
-<em>bootstrap를 참고하였으며 [프로젝트](https://github.com/ChangHyun2/airbnb-client)를 진행하며 적용해본 스타일링 방법입니다.   
+<em>bootstrap를 참고하였으며 [프로젝트](https://github.com/ChangHyun2/airbnb-client)를 진행하며 적용해본 스타일링 방법입니다.  
 자세한 csd 사용법은 [detail](./detail.md)에 작성했습니다.</em>
 <br/>
 
-
 ## 2. csd 라이브러리에서 제공하는 디자인 시스템을 그대로 사용할 경우
 
-csd는 material ui의 컬러 시스템과 airbnb 사이트 클론 프로젝트를 진행하며 구축했던 디자인 시스템을 포함하고 있습니다. 
-별도의 디자인 시스템을 구축하지 않는 경우라면 **1) csd package 설치** 후 사용해주시면 됩니다. 
+csd는 material ui의 컬러 시스템과 airbnb 사이트 클론 프로젝트를 진행하며 구축했던 디자인 시스템을 포함하고 있습니다.
+별도의 디자인 시스템을 구축하지 않는 경우라면 **1) csd package 설치** 후 사용해주시면 됩니다.
 만약 새로운 디자인 시스템을 구축하는 경우라면 **3. 커스텀한 디자인 시스템을 적용할 경우**를 참고해주시기 바랍니다.
 
 **1) csd package 설치**
+
 ```
 npm i csd
 ```
 
 **2) csd package 사용**
+
 ```
 // Nav.js
 
@@ -47,8 +47,7 @@ const Nav = () => <StyledNav>
 
 ## 3. 커스텀한 디자인 시스템을 적용할 경우
 
-새로운 디자인 시스템을 적용할 경우 csd에서 기본적으로 제공하는 디자인 시스템 관련 파일들을 수정한 후 `npm run build`한 `index.js`와 `index.d.ts` 파일을 프로젝트로 옮겨주신 후 `webpack alias`를 적용해 `import s from 'S'`문으로 새롭게 구성된 cssCodes를 사용해주시면 됩니다.
-
+새로운 디자인 시스템을 적용할 경우 csd에서 기본적으로 제공하는 디자인 시스템 관련 파일들을 수정한 후 `npm run build`한 `index.js`와 `index.d.ts` 파일을 프로젝트로 옮겨주신 후 `webpack alias`를 적용해 `import s from 'S'`문으로 새롭게 구성된 CSSRules를 사용해주시면 됩니다.
 
 **1) 레포 클론**
 
@@ -59,9 +58,10 @@ git clone https://github.com/ChangHyun2/csd
 **2) 디자인 시스템 관련 파일 수정**
 
 관련 파일/폴더는 아래와 같습니다.
+
 ```
 - colors
-- cssCodes
+- CSSRules
   - pad.js
   - round.js
   - spacing.js
@@ -79,8 +79,8 @@ git clone https://github.com/ChangHyun2/csd
 npm run build
 ```
 
-웹팩 build시, `lib` 폴더로 `index.js` 파일이 생성됩니다. 
-생성된 파일을 프로젝트 폴더로 옮기고 webpack alias를 통해 `import s from 'S'`의 짧은 구문으로 cssCodes를 import해주시면 됩니다.
+웹팩 build시, `lib` 폴더로 `index.js` 파일이 생성됩니다.
+생성된 파일을 프로젝트 폴더로 옮기고 webpack alias를 통해 `import s from 'S'`의 짧은 구문으로 CSSRules를 import해주시면 됩니다.
 
 **4) 프로젝트에서 사용하기**
 

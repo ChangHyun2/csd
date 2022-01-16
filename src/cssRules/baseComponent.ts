@@ -53,7 +53,13 @@ export const baseContainer = (
     const [bp, isBp] = entry;
 
     if (isBp) {
-      dynamicStyles += over[bp](`
+      dynamicStyles +=
+        bp === "xs"
+          ? `
+              padding-right: ${PAD.xs}px;
+              padding-left: ${PAD.xs}px;
+            `
+          : over[bp](`
               padding-right: ${PAD[bp]}px;
               padding-left: ${PAD[bp]}px;
             `);
